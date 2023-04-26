@@ -38,6 +38,7 @@ public class Job {
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
+
         Job job = (Job) o;
         return getId() == job.getId();
     }
