@@ -28,4 +28,13 @@ public class JobTest {
         assertEquals(job.getPositionType().getValue(), "Quality control");
         assertEquals(job.getCoreCompetency().getValue(), "Persistence");
     }
+
+    @Test
+    public void testToStringStartsAndEndsWithNewLine(){
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String jobString = job.toString();
+        char newLine = '\n';
+        assertEquals(jobString.charAt(0), newLine);
+        assertEquals(jobString.charAt(jobString.length() - 1), newLine);
+    }
 }
