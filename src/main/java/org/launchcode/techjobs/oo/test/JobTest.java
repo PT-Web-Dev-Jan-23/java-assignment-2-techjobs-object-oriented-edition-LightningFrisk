@@ -46,7 +46,7 @@ public class JobTest {
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         assertEquals(job.toString(), "\n" +
-                "ID: 1\n" +
+                "ID: "+ job.getId() +"\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -60,7 +60,7 @@ public class JobTest {
         String jobString = emptyJob.toString();
 
         assertEquals(jobString, "\n" +
-                "ID: 1\n" +
+                "ID: "+ emptyJob.getId() +"\n" +
                 "Name: Data not available\n" +
                 "Employer: Data not available\n" +
                 "Location: Data not available\n" +
