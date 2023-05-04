@@ -50,13 +50,52 @@ public class Job {
 
     @Override
     public String toString(){
+        Integer ID = this.getId();
+        String name = this.getName();
+        String verifiedName;
+        String employer = this.getEmployer().getValue();
+        String verifiedEmployer;
+        String location = this.getLocation().getValue();
+        String verifiedLocation;
+        String positionType = this.getPositionType().getValue();
+        String verifiedPositionType;
+        String coreCompetency = this.getCoreCompetency().getValue();
+        String verifiedCoreCompetency;
+
+        if (name.isEmpty()){
+            verifiedName = "Data not available";
+        } else {
+            verifiedName = name;
+        }
+        if (employer == null || employer.equals("")){
+            verifiedEmployer = "Data not available";
+        } else {
+            verifiedEmployer = employer;
+        }
+        if (location == null || location.equals("")){
+            verifiedLocation = "Data not available";
+        } else {
+            verifiedLocation = location;
+        }
+        if (positionType == null || positionType.equals("")){
+            verifiedPositionType = "Data not available";
+        } else {
+            verifiedPositionType = positionType;
+        }
+        if (coreCompetency == null || coreCompetency.equals("")){
+            verifiedCoreCompetency = "Data not available";
+        } else {
+            verifiedCoreCompetency = coreCompetency;
+        }
+
+
         String job = "\n" +
-                "ID: " + this.getId() +
-                "Name: " + this.getName() +
-                "Employer: " + this.getEmployer().getValue() +
-                "Location: " + this.getLocation().getValue() +
-                "Position Type: " + this.getPositionType().getValue() +
-                "Core Competency: " + this.getCoreCompetency().getValue() +
+                "ID: " + this.getId() + "\n" +
+                "Name: " + verifiedName + "\n" +
+                "Employer: " + verifiedEmployer + "\n" +
+                "Location: " + verifiedLocation + "\n" +
+                "Position Type: " + verifiedPositionType + "\n" +
+                "Core Competency: " + verifiedCoreCompetency + "\n" +
                 "\n";
         return job;
     };
@@ -64,7 +103,6 @@ public class Job {
 
     //  Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
-
 
     public int getId() {
         return id;
