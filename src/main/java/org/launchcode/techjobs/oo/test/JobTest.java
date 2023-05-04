@@ -19,6 +19,9 @@ public class JobTest {
         assertNotEquals(job1, job2);
     }
 
+
+    //Test Job with Data
+
     @Test
     public void testJobConstructorSetsAllFields(){
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
@@ -41,9 +44,8 @@ public class JobTest {
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String jobString = job.toString();
 
-        assertEquals(jobString, "\n" +
+        assertEquals(job.toString(), "\n" +
                 "ID: 1\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +

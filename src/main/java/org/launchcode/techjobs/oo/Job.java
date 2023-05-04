@@ -50,7 +50,7 @@ public class Job {
 
     @Override
     public String toString(){
-        Integer ID = this.getId();
+        //Integer ID = this.getId();
         String name = this.getName();
         String verifiedName;
         String employer = this.getEmployer().getValue();
@@ -89,7 +89,7 @@ public class Job {
         }
 
 
-        String job = "\n" +
+        return "\n" +
                 "ID: " + this.getId() + "\n" +
                 "Name: " + verifiedName + "\n" +
                 "Employer: " + verifiedEmployer + "\n" +
@@ -97,8 +97,7 @@ public class Job {
                 "Position Type: " + verifiedPositionType + "\n" +
                 "Core Competency: " + verifiedCoreCompetency + "\n" +
                 "\n";
-        return job;
-    };
+    }
 
 
     //  Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
