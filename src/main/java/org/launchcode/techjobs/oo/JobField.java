@@ -6,15 +6,14 @@ public abstract class JobField {
     private int id;
     private static int nextId = 1;
 
-    public void setValue(String value) {
-        this.value = value;
-    }
-
     private String value;
 
     public JobField() {
         this.id = nextId;
         nextId++;
+    }
+    public JobField(String value) {
+        this.value = value;
     }
 
     // Custom toString, equals, and hashCode methods:
@@ -31,7 +30,6 @@ public abstract class JobField {
 
     //  Use the "Generate" tool to add a getter and setter for the 'value' field but
     //  ONLY a getter for the 'id' field.
-
 
     public int getId() {
         return id;

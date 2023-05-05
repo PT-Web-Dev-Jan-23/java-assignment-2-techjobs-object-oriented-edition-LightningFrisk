@@ -1,18 +1,12 @@
 package org.launchcode.techjobs.oo;
 
 public class Employer extends JobField {
-    private String value;
 
     public Employer(String value) {
-        this.value = value;
+        super(value);
     }
 
     // Custom toString, equals, and hashCode methods:
-
-    @Override
-    public String toString() {
-        return value;
-    }
 
     @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
@@ -21,15 +15,5 @@ public class Employer extends JobField {
         Employer employer = (Employer) o;
         return getId() == employer.getId();
     }
-
     // Getters and Setters:
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
 }
