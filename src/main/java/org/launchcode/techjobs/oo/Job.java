@@ -95,8 +95,7 @@ public class Job {
                 "Employer: " + verifiedEmployer + "\n" +
                 "Location: " + verifiedLocation + "\n" +
                 "Position Type: " + verifiedPositionType + "\n" +
-                "Core Competency: " + verifiedCoreCompetency + "\n" +
-                "\n";
+                "Core Competency: " + verifiedCoreCompetency + "\n";
     }
 
 

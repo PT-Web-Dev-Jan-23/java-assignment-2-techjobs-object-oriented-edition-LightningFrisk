@@ -1,7 +1,5 @@
 package org.launchcode.techjobs.oo;
 
-import java.util.Objects;
-
 public class Employer extends JobField {
     private String value;
 
@@ -24,13 +22,7 @@ public class Employer extends JobField {
         return getId() == employer.getId();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
-
     // Getters and Setters:
-
 
     public String getValue() {
         return value;
