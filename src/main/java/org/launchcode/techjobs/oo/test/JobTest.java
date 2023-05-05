@@ -39,7 +39,7 @@ public class JobTest {
         assertTrue(job.getLocation() instanceof Location);
         assertTrue(job.getPositionType() instanceof PositionType);
         assertTrue(job.getCoreCompetency() instanceof CoreCompetency);
-        assertTrue(job instanceof Job);
+        assertTrue(job.getName() instanceof String);
     }
 
     @Test
