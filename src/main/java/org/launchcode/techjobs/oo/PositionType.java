@@ -1,18 +1,14 @@
 package org.launchcode.techjobs.oo;
 
 public class PositionType extends JobField {
-    private String value;
+
 
     public PositionType(String value) {
         super(value);
-        this.value = value;}
+    }
 
     //  Add a custom toString() method that returns the data stored in 'value'.
 
-    @Override
-    public String toString() {
-        return value;
-    }
 
     //  Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
@@ -26,13 +22,5 @@ public class PositionType extends JobField {
     }
 
     // Getters and Setters:
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 
 }
